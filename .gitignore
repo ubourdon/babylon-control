@@ -1,0 +1,14 @@
+
+//play! files
+logs
+project/project
+project/target
+target
+tmp
+.history
+dist
+
+//intellij files
+*.idea
+*.iml
+*.ipr
