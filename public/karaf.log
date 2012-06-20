@@ -11873,5 +11873,5 @@
 2012-06-19 14:57:40,827 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | callback 240000 events to web service
 2012-06-19 14:57:40,829 | INFO  | Thread-50        | ReflectionServiceFactoryBean     |  -  -  | Creating Service {http://api.webservices.crm.adnet/}LoadEntrepotServiceService from class adnet.crm.webservices.api.LoadEntrepotService
 2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | ====================================================================================
-2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT |           FIN DU BATCH LOADER EVENTS - durée du traitement : 287.103 secondes
+2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT |           FIN DU BATCH LOADER EVENTS - durée du traitement : 287.103 secondes [duree=287.103]
 2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | ====================================================================================

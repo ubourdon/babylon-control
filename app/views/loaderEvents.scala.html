@@ -11,19 +11,19 @@
         <img src="@routes.Assets.at("images/babcom.jpg")" alt="babcom" title="babcom" width="150px" />
         <h2>Babylon-control - crm supervision</h2>
     </header>
-    <section id="logs">
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
-        ici le détail des logs d'erreur<br/>
 
-    </section>
-    <section id="meta">
-        <p>date : @log.date</p>
-        <p>durée du batch : @log.duration s</p>
-    </section>
+    <div>
+        <section id="logs">
+            <h3>logs d'erreurs</h3>
+            <p>@log.entireContent</p>
+        </section>
+        <section id="meta">
+            <p>date : @log.date</p>
+            <p>durée du batch : @log.duration s</p>
+        </section>
+
+        <div class="clear"></div>
+    </div>
+
 </body>
 </html>

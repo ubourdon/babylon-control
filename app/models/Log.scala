@@ -1,3 +1,5 @@
 package models
 
-case class Log( date: String, duration: String )
+import play.api.templates.Html
+
+case class Log( entireContent: Html, date: String, duration: String )
