@@ -1,0 +1,30 @@
+body {
+    width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+header img {
+    display: inline-block;
+    margin-right: 3%;
+}
+
+header h2 {
+    display: inline-block;
+}
+
+#logs {
+    display: inline-block;
+    width: 73%;
+    /*background-color: red;*/
+}
+
+#meta {
+    margin-left: 1%;
+    padding: 1%;
+    padding-top: 80px;
+    width: 23%;
+    display: inline-block;
+    /*background-color: blue;*/
+}

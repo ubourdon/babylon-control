@@ -8,11 +8,11 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
-      // Add your project dependencies here,
+        "org.scalatest" %% "scalatest" % "1.7.1" % "test"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
-      // Add your own project settings here      
+        testOptions in Test := Nil  //to run scalatest in play2 console arghhhh!!!
     )
 
 }
