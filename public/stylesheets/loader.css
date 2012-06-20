@@ -1,5 +1,5 @@
 body {
-    width: 1200px;
+    width: 1300px;
     margin: auto;
     margin-top: 30px;
     font-size: 0.9em;
@@ -40,6 +40,14 @@ header h2 {
 
 #meta p {
     font-size: 0.8em;
+}
+
+#meta fieldset {
+    margin-top: 10px;
+}
+
+#meta > fieldset:first-child {
+    margin-top: 0;
 }
 
 .clear:after {

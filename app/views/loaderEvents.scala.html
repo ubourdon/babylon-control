@@ -18,9 +18,32 @@
             <p>@log.entireContent</p>
         </section>
         <section id="meta">
-            <p>date : @log.date</p>
-            <p>durée du batch : @log.duration s</p>
-            <p>nombre de single event renvoyés : @log.callback</p>
+            <fieldset>
+                <legend>général</legend>
+                <p>date : @log.date</p>
+                <p>durée du batch : @log.duration s</p>
+                <p>nombre de single event recupérés : @log.callback</p>
+                <p>nombre de single event renvoyés : @log.callback</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>comptes</legend>
+                <p>nb à charger : </p>
+                <p>nb d'erreurs : </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>contacts</legend>
+                <p>nb à charger : </p>
+                <p>nb d'erreurs : </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>opportunités</legend>
+                <p>nb à charger : </p>
+                <p>nb d'erreurs : </p>
+            </fieldset>
+
         </section>
 
         <div class="clear"></div>
