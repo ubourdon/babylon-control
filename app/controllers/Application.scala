@@ -12,7 +12,8 @@ object Application extends Controller {
 
         val log: Log = Log( parser.all,
                             parser.retrieveValueFromPattern( LogPattern.DATE ).getOrElse( "none" ),
-                            parser.retrieveValueFromPattern( LogPattern.BATCH_DURATION ).getOrElse( "none" )
+                            parser.retrieveValueFromPattern( LogPattern.BATCH_DURATION ).getOrElse( "none" ),
+                            parser.retrieveValueFromPattern( LogPattern.CALLBACK_EVENTS ).getOrElse( "None" )
         )
 
         Ok( views.html.loaderEvents( "batch loader du 25 mai 2012", log ) )

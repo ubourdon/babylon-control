@@ -38,6 +38,10 @@ header h2 {
     /*border: 1px dotted red !important*/
 }
 
+#meta p {
+    font-size: 0.8em;
+}
+
 .clear:after {
     clear:both;
 }

@@ -11870,7 +11870,7 @@
 2012-06-19 14:57:40,826 | ERROR | Thread-50        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Single Event non acquitted - external id : 00058703 - type : OPPORTUNITY
 2012-06-19 14:57:40,826 | ERROR | Thread-50        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Single Event non acquitted - external id : 00058700 - type : OPPORTUNITY
 2012-06-19 14:57:40,826 | ERROR | Thread-50        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Single Event non acquitted - external id : 00058701 - type : OPPORTUNITY
-2012-06-19 14:57:40,827 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | callback 240000 events to web service
+2012-06-19 14:57:40,827 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | callback 240000 events to web service [callback=240000]
 2012-06-19 14:57:40,829 | INFO  | Thread-50        | ReflectionServiceFactoryBean     |  -  -  | Creating Service {http://api.webservices.crm.adnet/}LoadEntrepotServiceService from class adnet.crm.webservices.api.LoadEntrepotService
 2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | ====================================================================================
 2012-06-19 14:57:46,776 | INFO  | Thread-50        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT |           FIN DU BATCH LOADER EVENTS - durée du traitement : 287.103 secondes [duree=287.103]
