@@ -20,32 +20,31 @@
         <section id="meta">
             <fieldset>
                 <legend>général</legend>
-                <p>date : @log.date</p>
-                <p>durée du batch : @log.duration s</p>
-                <p>nombre de single event recupérés : @log.callback</p>
-                <p>nombre de single event renvoyés : @log.callback</p>
+                <p>date : <b>@log.date</b></p>
+                <p>durée du batch : <b>@log.duration s</b></p>
+                <p>nombre de single event recupérés : <b>@log.retrieve</b></p>
+                <p>nombre de single event renvoyés : <b>@log.callback</b></p>
             </fieldset>
 
             <fieldset>
                 <legend>comptes</legend>
-                <p>nb à charger : </p>
-                <p>nb d'erreurs : </p>
+                <p>nb à charger : <b>@log.accountDownloaded</b></p>
+                <p>nb de succès : <b>@log.accountUploaded</b></p>
             </fieldset>
 
             <fieldset>
                 <legend>contacts</legend>
-                <p>nb à charger : </p>
-                <p>nb d'erreurs : </p>
+                <p>nb à charger : <b>@log.contactDownloaded</b></p>
+                <p>nb de succès : <b>@log.contactUploaded</b></p>
             </fieldset>
 
             <fieldset>
                 <legend>opportunités</legend>
-                <p>nb à charger : </p>
-                <p>nb d'erreurs : </p>
+                <p>nb à charger : <b>@log.opportunityDownloaded</b></p>
+                <p>nb de succès : <b>@log.opportunityUploaded</b></p>
             </fieldset>
 
         </section>
-
         <div class="clear"></div>
     </div>
 
