@@ -216,9 +216,9 @@ Infos: locking
 2012-06-20 11:37:14,364 | INFO  | Thread-68        | SFBuilder                        | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | perform transformation of 2788 single event in sObject
 2012-06-20 11:37:16,335 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | 
 
-=============================================================================================================
+=====================================================================================
 starting loading Account
-=============================================================================================================
+=====================================================================================
 
 2012-06-20 11:37:16,335 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 2788 Account events [AccountDownload=2788]
 2012-06-20 11:37:21,712 | ERROR | pool-20-thread-3 | UpsertSendingTask$1              | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | 
@@ -70026,9 +70026,9 @@ Referenceactivitesectorielle__r : type # Rubrique__c // Codeactivitesectorielle_
 2012-06-20 11:37:25,727 | INFO  | Thread-68        | SFBuilder                        | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | perform transformation of 1197 single event in sObject
 2012-06-20 11:37:25,973 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | 
 
-=============================================================================================================
+====================================================================================
 starting loading Contact
-=============================================================================================================
+====================================================================================
 
 2012-06-20 11:37:25,973 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 1197 Contact events [ContactDownload=1197]
 2012-06-20 11:37:27,864 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Contact - loading event return 1197 upsert results
@@ -70036,9 +70036,9 @@ starting loading Contact
 2012-06-20 11:37:28,344 | INFO  | Thread-68        | SFBuilder                        | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | perform transformation of 2171 single event in sObject
 2012-06-20 11:37:29,320 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | 
 
-=============================================================================================================
+====================================================================================
 starting loading Opportunity
-=============================================================================================================
+====================================================================================
 
 2012-06-20 11:37:29,321 | INFO  | Thread-68        | SFLoaderService                  | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 2171 Opportunity events [OpportunityDownload=2171]
 2012-06-20 11:37:33,105 | ERROR | ool-22-thread-11 | UpsertSendingTask$1              | 171 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | 
