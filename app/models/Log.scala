@@ -73,7 +73,7 @@ class LogBuilder {
         this
     }
 
-    def withOpportunityDownloaded( opportunityUploaded: String ): LogBuilder = {
+    def withOpportunityUploaded( opportunityUploaded: String ): LogBuilder = {
         this.opportunityUploaded = opportunityUploaded
         this
     }
@@ -88,7 +88,7 @@ class LogBuilder {
         this
     }
 
-    def withOpportunityUploaded( opportunityDownloaded: String ): LogBuilder = {
+    def withOpportunityDownloaded( opportunityDownloaded: String ): LogBuilder = {
         this.opportunityDownloaded = opportunityDownloaded
         this
     }

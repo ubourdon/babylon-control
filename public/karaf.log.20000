@@ -14,8 +14,8 @@ starting loading Account
 ============================================================================================
 
 2012-06-21 15:17:49,384 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 20000 Account events [AccountDownload=20000]
-2012-06-21 15:18:33,936 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Account - loading event return 20000 upsert results [AccountUpload=20000]
-2012-06-21 15:18:33,963 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Account: work on 20000 succeed result for 20000 upsertResults
+2012-06-21 15:18:33,936 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Account - loading event return 20000 upsert results
+2012-06-21 15:18:33,963 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Account: work on 20000 succeed result for 20000 upsertResults [AccountUpload=20000]
 2012-06-21 15:18:39,245 | INFO  | Thread-64        | SFBuilder                        | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | perform transformation of 20000 single event in sObject
 2012-06-21 15:18:40,136 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT |
 
@@ -24,8 +24,8 @@ starting loading Contact
 ============================================================================================
 
 2012-06-21 15:18:40,137 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 20000 Contact events [ContactDownload=20000]
-2012-06-21 15:19:05,403 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Contact - loading event return 20000 upsert results [ContactUpload=20000]
-2012-06-21 15:19:05,420 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Contact: work on 20000 succeed result for 20000 upsertResults
+2012-06-21 15:19:05,403 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Contact - loading event return 20000 upsert results
+2012-06-21 15:19:05,420 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Contact: work on 20000 succeed result for 20000 upsertResults [ContactUpload=20000]
 2012-06-21 15:19:10,010 | INFO  | Thread-64        | SFBuilder                        | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | perform transformation of 20000 single event in sObject
 2012-06-21 15:19:12,123 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT |
 
@@ -34,8 +34,8 @@ starting loading Opportunity
 ============================================================================================
 
 2012-06-21 15:19:12,123 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | try to loading 20000 Opportunity events [OpportunityDownload=20000]
-2012-06-21 15:19:42,133 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Opportunity - loading event return 20000 upsert results [OpportunityUpload=20000]
-2012-06-21 15:19:42,148 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Opportunity: work on 20000 succeed result for 20000 upsertResults
+2012-06-21 15:19:42,133 | INFO  | Thread-64        | SFLoaderService                  | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | type: Opportunity - loading event return 20000 upsert results
+2012-06-21 15:19:42,148 | INFO  | Thread-64        | SFAcquitMaker                    | 154 - adnet.crm.services.sf-services-impl - 1.0.0.SNAPSHOT | Opportunity: work on 20000 succeed result for 20000 upsertResults [OpportunityUpload=20000]
 2012-06-21 15:19:46,528 | INFO  | Thread-64        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | callback 60000 events to web service [callback=60000]
 2012-06-21 15:19:46,534 | INFO  | Thread-64        | ReflectionServiceFactoryBean     |  -  -  | Creating Service {http://api.webservices.crm.adnet/}LoadEntrepotServiceService from class adnet.crm.webservices.api.LoadEntrepotService
 2012-06-21 15:22:47,503 | INFO  | Thread-64        | EventConsumerImpl                | 157 - adnet.crm.loader.events.impl - 1.0.0.SNAPSHOT | ====================================================================================
