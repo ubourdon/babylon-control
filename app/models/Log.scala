@@ -3,6 +3,7 @@ package models
 import play.api.templates.Html
 
 case class Log( entireContent: Html,
+                prettyContent: Html, 
                 date: String,
                 duration: String,
                 retrieve: String,
@@ -18,6 +19,7 @@ case class Log( entireContent: Html,
 class LogBuilder {
 
     var entireContent: Html = _
+    var prettyContent: Html = _
     var date: String = _
     var duration: String = _
     var retrieve: String = _
@@ -29,13 +31,18 @@ class LogBuilder {
     var contactDownloaded: String = _
     var opportunityDownloaded: String = _
 
-    def toLog: Log = Log( entireContent, date, duration, retrieve, callback, accountUploaded, contactUploaded, opportunityUploaded, accountDownloaded, contactDownloaded, opportunityDownloaded )
+    def toLog: Log = Log( entireContent, prettyContent, date, duration, retrieve, callback, accountUploaded, contactUploaded, opportunityUploaded, accountDownloaded, contactDownloaded, opportunityDownloaded )
     
     def withEntireContent( entireContent: Html ): LogBuilder = {
         this.entireContent = entireContent
         this
     }
 
+    def withPrettyContent( prettyContent: Html ): LogBuilder = {
+        this.prettyContent = prettyContent
+        this
+    }
+    
     def withDate( date: String ): LogBuilder = {
         this.date = date
         this

@@ -31,6 +31,10 @@ header h2 {
     font-size: 0.8em;
 }
 
+#raw {
+    display: none;
+}
+
 #options {
     font-size: 0.8em;
 }

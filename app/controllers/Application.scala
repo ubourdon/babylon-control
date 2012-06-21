@@ -11,7 +11,8 @@ object Application extends Controller {
         val parser = new LogParser( "public/karaf.log" )
 
         val log: Log = new LogBuilder()
-            .withEntireContent( parser.prettyAll )
+            .withEntireContent( parser.all )
+            .withPrettyContent( parser.prettyAll )
             .withDate( parser.retrieveValueFromPattern( LogPattern.DATE ).getOrElse( "none" ) )
             .withDuration( parser.retrieveValueFromPattern( LogPattern.BATCH_DURATION ).getOrElse( "none" ) )
             .withRetrieve( parser.retrieveValueFromPattern( LogPattern.RETRIEVE_EVENTS ).getOrElse( "none" ) )
