@@ -26,7 +26,24 @@ class LogParser( filePath: String ) {
         val source = Source.fromFile( filePath )( Codec.UTF8 )
         val buffer = new StringBuffer()
 
-        source.getLines().foreach( line => buffer.append( line ).append( "<br/>" ) )
+        source.getLines().foreach ( line => buffer.append( line ).append( "<br/>" ) )
+
+        source.close()
+
+        HtmlFormat.raw( buffer.toString )
+    }
+    
+    def prettyAll: Html = {
+        val source = Source.fromFile( filePath )( Codec.UTF8 )
+        val buffer = new StringBuffer()
+
+        source.getLines().foreach (
+            line => {
+                val split = line.split( "\\|" )
+                if( split.length == 6 ) buffer.append( split(1) ).append( "|" ).append( split( 5 ) ).append( "<br/>" )
+                else buffer.append( line ).append( "<br/>" )
+            }
+        )
 
         source.close()
 

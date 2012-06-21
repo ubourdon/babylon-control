@@ -7,11 +7,11 @@ object LogPattern {
     val RETRIEVE_EVENTS = "[retrieve="
     val CALLBACK_EVENTS = "[callback="
 
-    val ACCOUNT_UPLOAD = "[accountUpload="
-    val CONTACT_UPLOAD = "[contactUpload="
-    val OPPORTUNITY_UPLOAD = "[opportunityUpload="
+    val ACCOUNT_UPLOAD = "[AccountUpload="
+    val CONTACT_UPLOAD = "[ContactUpload="
+    val OPPORTUNITY_UPLOAD = "[OpportunityUpload="
 
-    val ACCOUNT_DOWNLOAD = "[accountDownload="
-    val CONTACT_DOWNLOAD = "[contactDownload="
-    val OPPORTUNITY_DOWNLOAD = "[opportunityDownload="
+    val ACCOUNT_DOWNLOAD = "[AccountDownload="
+    val CONTACT_DOWNLOAD = "[ContactDownload="
+    val OPPORTUNITY_DOWNLOAD = "[OpportunityDownload="
 }
