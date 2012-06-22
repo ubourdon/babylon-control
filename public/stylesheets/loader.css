@@ -20,15 +20,22 @@ header h2 {
 #logs {
     float: left;
     width: 73%;
-    height: 450px;
-    overflow-y: scroll;
-    background-color: black;
-    padding: 1% 1% 1% 1%;
-    /*border: 1px dotted red !important*/
+    padding: 1% 0 1% 1%;
 }
 
 #logs p {
     font-size: 0.8em;
+}
+
+#logs h3 {
+    margin: 0;
+}
+
+#displayLog {
+    overflow-y: scroll;
+    height: 400px;
+    background-color: black;
+    padding: 1%;
 }
 
 #raw {
@@ -43,7 +50,6 @@ header h2 {
     padding-left: 2%;
     width: 23%;
     float: right;
-    /*border: 1px dotted red !important*/
 }
 
 #meta p {

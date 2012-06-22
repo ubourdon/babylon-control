@@ -10,19 +10,22 @@
 </head>
 <body>
     <header>
-        <img src="@routes.Assets.at("images/babcom.jpg")" alt="babcom" title="babcom" width="150px" />
+        <img src="@routes.Assets.at("images/babcom-bandeau.jpg")" alt="babcom" title="babcom" width="450px" />
         <h2>Babylon-control - crm supervision</h2>
     </header>
 
     <div>
         <section id="logs">
-            <div id="options">
-                <label for="decorate">log brut<label><input type="checkbox" id="decorate" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="error">erreurs<label><input type="checkbox" id="error" />
-            </div>
             <h3>Logs</h3>
-            <p id="raw">@log.entireContent</p>
-            <p id="pretty">@log.prettyContent</p>
+            <div id="options">
+                <span><label for="decorate">log brut<label><input type="checkbox" id="decorate" /></span>
+                <span><label for="error">erreurs<label><input type="checkbox" id="error" /><span>
+            </div>
+
+            <div id="displayLog">
+                <p id="raw">@log.entireContent</p>
+                <p id="pretty">@log.prettyContent</p>
+            </div>
         </section>
 
         <section id="meta">
