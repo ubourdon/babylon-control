@@ -6,14 +6,14 @@ case class Log( entireContent: Html,
                 prettyContent: Html, 
                 date: String,
                 duration: String,
-                retrieve: String,
-                callback: String,
-                accountUploaded: String,
-                contactUploaded: String, 
-                opportunityUploaded: String, 
-                accountDownloaded: String,
-                contactDownloaded: String,
-                opportunityDownloaded: String
+                retrieve: Int,
+                callback: Int,
+                accountUploaded: Int,
+                contactUploaded: Int,
+                opportunityUploaded: Int,
+                accountDownloaded: Int,
+                contactDownloaded: Int,
+                opportunityDownloaded: Int
 )
 
 class LogBuilder {
@@ -22,14 +22,14 @@ class LogBuilder {
     var prettyContent: Html = _
     var date: String = _
     var duration: String = _
-    var retrieve: String = _
-    var callback: String = _
-    var accountUploaded: String = _
-    var contactUploaded: String = _
-    var opportunityUploaded: String = _
-    var accountDownloaded: String = _
-    var contactDownloaded: String = _
-    var opportunityDownloaded: String = _
+    var retrieve: Int = _
+    var callback: Int = _
+    var accountUploaded: Int = _
+    var contactUploaded: Int = _
+    var opportunityUploaded: Int = _
+    var accountDownloaded: Int = _
+    var contactDownloaded: Int = _
+    var opportunityDownloaded: Int = _
 
     def toLog: Log = Log( entireContent, prettyContent, date, duration, retrieve, callback, accountUploaded, contactUploaded, opportunityUploaded, accountDownloaded, contactDownloaded, opportunityDownloaded )
     
@@ -53,42 +53,42 @@ class LogBuilder {
         this
     }
 
-    def withRetrieve( retrieve: String ): LogBuilder = {
+    def withRetrieve( retrieve: Int ): LogBuilder = {
         this.retrieve = retrieve
         this
     }
 
-    def withCallback( callback: String ): LogBuilder = {
+    def withCallback( callback: Int ): LogBuilder = {
         this.callback = callback
         this
     }
 
-    def withAccountUploaded( accountUploaded: String ): LogBuilder = {
+    def withAccountUploaded( accountUploaded: Int ): LogBuilder = {
         this.accountUploaded = accountUploaded
         this
     }
 
-    def withContactUploaded( contactUploaded: String ): LogBuilder = {
+    def withContactUploaded( contactUploaded: Int ): LogBuilder = {
         this.contactUploaded = contactUploaded
         this
     }
 
-    def withOpportunityUploaded( opportunityUploaded: String ): LogBuilder = {
+    def withOpportunityUploaded( opportunityUploaded: Int ): LogBuilder = {
         this.opportunityUploaded = opportunityUploaded
         this
     }
 
-    def withAccountDownloaded( accountDownloaded: String ): LogBuilder = {
+    def withAccountDownloaded( accountDownloaded: Int ): LogBuilder = {
         this.accountDownloaded = accountDownloaded
         this
     }
 
-    def withContactDownloaded( contactDownloaded: String ): LogBuilder = {
+    def withContactDownloaded( contactDownloaded: Int ): LogBuilder = {
         this.contactDownloaded = contactDownloaded
         this
     }
 
-    def withOpportunityDownloaded( opportunityDownloaded: String ): LogBuilder = {
+    def withOpportunityDownloaded( opportunityDownloaded: Int ): LogBuilder = {
         this.opportunityDownloaded = opportunityDownloaded
         this
     }
