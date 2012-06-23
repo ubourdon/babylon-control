@@ -22,7 +22,7 @@
                 };
 
                 if( e.keyCode === ESCAPE_KEY ) {
-                    $( '#displayLog' ).css( { 'position':'static', 'width':'auto', 'height':'400px' } );
+                    $( '#displayLog' ).css( { 'position':'static', 'width':'auto', 'height':'440px' } );
                 }
 
                 //console.log( e.which, e.altKey, e.ctrlKey, e.metaKey, e.keyCode );

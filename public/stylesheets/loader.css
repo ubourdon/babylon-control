@@ -9,19 +9,22 @@ body {
     overflow: hidden;
 }
 
-header img {
-    display: inline-block;
-    margin-right: 3%;
+header {
+    background-image: url( "/assets/images/babylon5Banner.jpeg" );
+    width: 340px;
+    padding: 100px 0 0 20px;
+    margin-left: 1%;
 }
 
 header h2 {
-    display: inline-block;
+    font-size: 1.2em;
+    color: #8a2be2;
 }
 
 #logs {
     float: left;
     width: 73%;
-    padding: 1% 0 1% 1%;
+    padding: 0 0 1% 1%;
 }
 
 #logs p {
@@ -34,9 +37,13 @@ header h2 {
 
 #displayLog {
     overflow-y: scroll;
-    height: 400px;
+    height: 440px;
     background-color: black;
     padding: 1%;
+}
+
+#options {
+    margin-bottom: 10px;
 }
 
 #raw {
@@ -51,6 +58,10 @@ header h2 {
     padding-left: 2%;
     width: 23%;
     float: right;
+}
+
+#meta {
+    margin-top: 20px;
 }
 
 #meta p {
