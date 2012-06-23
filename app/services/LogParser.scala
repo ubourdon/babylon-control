@@ -76,6 +76,27 @@ class LogParser( filePath: String ) {
                         .append( "</span>" ).toString
                 } else pLine
 
+                pLine = if( pLine.contains( "starting loading Account" ) ) {
+                    new StringBuilder()
+                        .append( "<a name=\"startAccount\">" )
+                        .append( pLine )
+                        .append( "</a>" ).toString
+                } else pLine
+
+                pLine = if( pLine.contains( "starting loading Contact" ) ) {
+                    new StringBuilder()
+                        .append( "<a name=\"startContact\">" )
+                        .append( pLine )
+                        .append( "</a>" ).toString
+                } else pLine
+
+                pLine = if( pLine.contains( "starting loading Opportunity" ) ) {
+                    new StringBuilder()
+                        .append( "<a name=\"startOpportunity\">" )
+                        .append( pLine )
+                        .append( "</a>" ).toString
+                } else pLine
+                
                 pLine = new StringBuilder().append( pLine ).append( "<br/>" ).toString
 
                 pLine

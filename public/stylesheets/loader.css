@@ -61,8 +61,22 @@ header h2 {
     margin-top: 10px;
 }
 
+#meta legend {
+    padding: 0 3% 0 3%;
+}
+
 #meta > fieldset:first-child {
     margin-top: 0;
+}
+
+#meta fieldset a {
+    text-decoration: none;
+    color: white;
+}
+
+#meta fieldset a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .clear:after {
