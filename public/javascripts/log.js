@@ -21,15 +21,15 @@
                     $( '#displayLog' ).css( { 'position':'absolute', 'top':'0', 'left':'0', 'width':documentWidth + 'px', 'height':documentHeight + 'px' } );
                 };
 
-                if( e.which === ESCAPE_KEY ) {
+                if( e.keyCode === ESCAPE_KEY ) {
                     $( '#displayLog' ).css( { 'position':'static', 'width':'auto', 'height':'400px' } );
                 }
 
-                //console.log( e.which, e.altKey, e.ctrlKey, e.metaKey );
+                //console.log( e.which, e.altKey, e.ctrlKey, e.metaKey, e.keyCode );
             } );
         }
     }
 
     var X_KEY = 120;
-    var ESCAPE_KEY = 0;
+    var ESCAPE_KEY = 27;
 } ).call( this );
