@@ -6,6 +6,7 @@ body {
     font-family: 'Droid Sans',sans-serif;
     background-color: #322D2F;
     color: white;
+    overflow: hidden;
 }
 
 header img {
