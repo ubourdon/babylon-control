@@ -34,19 +34,56 @@ class LogParser( filePath: String ) {
     }
     
     def prettyAll: Html = {
+        val separator = "=============================="
+        val separator2 = "_____________________________"
+
+
         val source = Source.fromFile( filePath )( Codec.UTF8 )
-        val buffer = new StringBuffer()
 
-        source.getLines().foreach (
+        val prettyLog = source.getLines().map (
             line => {
+                var pLine = line
                 val split = line.split( "\\|" )
-                if( split.length == 6 ) buffer.append( split(1) ).append( "|" ).append( split( 5 ) ).append( "<br/>" )
-                else buffer.append( line ).append( "<br/>" )
-            }
-        )
 
+                pLine = if( split.length == 6 ) new StringBuilder().append( split( 1 ) ).append( "|" ).append( split( 5 ) ).toString else pLine
+                pLine = if( split.length == 5 ) new StringBuilder().toString else pLine
+
+                pLine = if( pLine.contains( separator ) || pLine.contains( "starting loading" )  ) {
+                    new StringBuilder()
+                        .append( "<span style=\"color: blue;font-weight: bold;\">" )
+                        .append( pLine )
+                        .append( "</span>" ).toString
+                } else pLine
+
+                pLine = if( !pLine.contains( "INFO" ) && !pLine.contains( "WARN" ) && !pLine.contains( separator2 ) && !pLine.contains( "ext_id" ) ) {
+                    new StringBuilder()
+                        .append( "<span style=\"color: red;\">" )
+                        .append( pLine )
+                        .append( "</span>" ).toString
+                } else pLine
+                
+                pLine = if( pLine.contains( "LANCEMENT DU BATCH" ) || pLine.contains( "FIN DU BATCH" ) || ( pLine.contains( "INFO" ) && pLine.contains( "========" ) ) ) {
+                    new StringBuilder()
+                        .append( "<span style=\"color: green;font-weight: bold;\">" )
+                        .append( pLine.split( "\\|" )( 1 ) )
+                        .append( "</span>" ).toString
+                } else pLine
+
+                pLine = if( pLine.contains( "ext_id" ) ) {
+                    new StringBuilder()
+                        .append( "<span style=\"color: yellow;font-weight: bold;\">" )
+                        .append( pLine )
+                        .append( "</span>" ).toString
+                } else pLine
+
+                pLine = new StringBuilder().append( pLine ).append( "<br/>" ).toString
+
+                pLine
+            }
+        ).mkString
+        
         source.close()
 
-        HtmlFormat.raw( buffer.toString )
+        HtmlFormat.raw( prettyLog )
     }
 }

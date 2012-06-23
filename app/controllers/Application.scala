@@ -8,7 +8,7 @@ import models.{LogBuilder, Log}
 object Application extends Controller {
 
     def index = Action {
-        Ok("Welcome to babylon-control")
+        Ok( "Welcome to babylon-control" )
     }
     
     def logEvents( file: String ) = Action {
@@ -32,6 +32,6 @@ object Application extends Controller {
             .withOpportunityDownloaded( parser.retrieveValueFromPattern( LogPattern.OPPORTUNITY_DOWNLOAD ).getOrElse( "none" ).toInt )
             .toLog
 
-        Ok(views.html.loaderEvents("batch loader du 25 mai 2012", log))
+        Ok( views.html.loaderEvents( "batch loader" + file, log ) )
     }
 }
