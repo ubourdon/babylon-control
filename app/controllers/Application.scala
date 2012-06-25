@@ -4,15 +4,20 @@ import play.api.mvc._
 import services.LogParser
 import log.pattern.LogPattern
 import models.{LogBuilder, Log}
+import dao.LogDao
 
 object Application extends Controller {
 
-    def index = Action {
-        Ok( "Welcome to babylon-control" )
-    }
+    implicit val pathToLog: String = "public/logs"
+
+    val logDao: LogDao = new LogDao()
     
-    def logEvents( file: String ) = Action {
-        val parser = new LogParser( "public/logs/" + file )
+    def index = Action {
+        Ok( views.html.index( "babylon-control!" ) )
+    }
+
+    def logEvents( fileName: String ) = Action {
+        val parser = new LogParser( fileName )
 
         val log: Log = new LogBuilder()
             .withEntireContent( parser.all )
@@ -32,6 +37,10 @@ object Application extends Controller {
             .withOpportunityDownloaded( parser.retrieveValueFromPattern( LogPattern.OPPORTUNITY_DOWNLOAD ).getOrElse( "none" ).toInt )
             .toLog
 
-        Ok( views.html.loaderEvents( "batch loader" + file, log ) )
+        Ok( views.html.loaderEvents( "batch loader" + fileName, log ) )
+    }
+    
+    def listLogFile = Action {
+        Ok( logDao.list.mkString("#") )
     }
 }

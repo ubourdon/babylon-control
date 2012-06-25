@@ -4,12 +4,12 @@ import play.api.templates.{Html, HtmlFormat}
 import io.{Codec, Source}
 
 
-class LogParser( filePath: String ) {
+class LogParser( fileName: String )( implicit basePath: String ) {
 
     private val END_PATTERN = "]"
     private val VALUE_SEPARATOR = "="
     
-    private val fileContent = Source.fromFile( filePath ).mkString
+    private val fileContent = Source.fromFile( basePath + "/" + fileName ).mkString
 
     def retrieveValueFromPattern( pattern: String ): Option[String] = {
         val startIndex: Int = fileContent.indexOf( pattern )
@@ -23,7 +23,7 @@ class LogParser( filePath: String ) {
     }
 
     def all: Html = {
-        val source = Source.fromFile( filePath )( Codec.UTF8 )
+        val source = Source.fromFile( basePath + "/" + fileName )( Codec.UTF8 )
         val buffer = new StringBuffer()
 
         source.getLines().foreach ( line => buffer.append( line ).append( "<br/>" ) )
@@ -38,7 +38,7 @@ class LogParser( filePath: String ) {
         val separator2 = "_____________________________"
 
 
-        val source = Source.fromFile( filePath )( Codec.UTF8 )
+        val source = Source.fromFile( basePath + "/" + fileName )( Codec.UTF8 )
 
         val prettyLog = source.getLines().map (
             line => {
