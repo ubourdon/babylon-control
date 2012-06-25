@@ -1,7 +1,41 @@
-@(message: String)
+@(title: String)
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
-}
+<html>
+<head>
+    <title>@title</title>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/index.css")">
+    <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <!--<script src="@routes.Assets.at("javascripts/log.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/loaderJs.js")" type="text/javascript"></script>-->
+</head>
+<body>
+    <section id="events">
+        <fieldset>
+            <legend>accès au batch des évènements</legend>
+            <form action="/eventLog" method="post">
+            <input list="schtroumpfs" />
+            <datalist id="schtroumpfs">
+                <option value="Grand schtroumpf" />
+                <option value="Schtroumpfette" />
+                <option value="Bébé schtroumpf" />
+            </datalist>
+            </form>
+        </fieldset>
+    </section>
+    <section id="users">
+        <fieldset>
+            <legend>accès au batch des users</legend>
+        </fieldset>
+        </section>
+    <section id="granary">
+        <fieldset>
+            <legend>accès au grenier de données</legend>
+        </fieldset>
+    </section>
+    <section id="salesforce">
+        <fieldset>
+            <legend>état de salesforce</legend>
+        </fieldset>
+    </section>
+</body>
+</html>

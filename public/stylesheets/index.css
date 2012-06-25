@@ -1,0 +1,11 @@
+body {
+    width: 1300px;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-family: 'Droid Sans',sans-serif;
+}
+
+section {
+    width: 30%;
+}
