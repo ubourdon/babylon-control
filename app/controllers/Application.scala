@@ -12,7 +12,7 @@ object Application extends Controller {
     }
     
     def logEvents( file: String ) = Action {
-        val parser = new LogParser( "public/" + file )
+        val parser = new LogParser( "public/logs/" + file )
 
         val log: Log = new LogBuilder()
             .withEntireContent( parser.all )
