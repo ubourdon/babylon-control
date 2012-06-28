@@ -42,6 +42,8 @@ class LogParser( fileName: String )( implicit basePath: String ) {
 
         val source = Source.fromFile( basePath + "/" + fileName )( Codec.UTF8 )
 
+        var target = "nego"
+
         val prettyLog = source.getLines().map (
             line => {
                 var pLine = line
@@ -78,25 +80,34 @@ class LogParser( fileName: String )( implicit basePath: String ) {
                         .append( "</span>" ).toString
                 } else pLine
 
-                pLine = if( pLine.contains( "starting loading Account" ) ) {
+                pLine = if( pLine.contains( "starting loading Account" ) && target.equals( "advertiser" ) ) {
                     new StringBuilder()
                         .append( "<a name=\"startAccount\">" )
                         .append( pLine )
                         .append( "</a>" ).toString
                 } else pLine
 
-                pLine = if( pLine.contains( "starting loading Contact" ) ) {
+                pLine = if( pLine.contains( "starting loading Contact" ) && target.equals( "advertiser" ) ) {
                     new StringBuilder()
                         .append( "<a name=\"startContact\">" )
                         .append( pLine )
                         .append( "</a>" ).toString
                 } else pLine
 
-                pLine = if( pLine.contains( "starting loading Opportunity" ) ) {
+                pLine = if( pLine.contains( "starting loading Opportunity" ) && target.equals( "advertiser" ) ) {
                     new StringBuilder()
                         .append( "<a name=\"startOpportunity\">" )
                         .append( pLine )
                         .append( "</a>" ).toString
+                } else pLine
+
+                if( pLine.contains( "starting loading Opportunity" ) ) target = "advertiser"
+                
+                pLine = if( pLine.contains( "negociator" ) || pLine.contains( "advertiser" ) ) {
+                    new StringBuilder()
+                        .append( "<span style=\"color: orange;font-weight: bold;\">" )
+                        .append( pLine )
+                        .append( "</span>" ).toString
                 } else pLine
                 
                 pLine = new StringBuilder().append( pLine ).append( "<br/>" ).toString
