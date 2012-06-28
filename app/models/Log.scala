@@ -13,7 +13,11 @@ case class Log( entireContent: Html,
                 opportunityUploaded: Int,
                 accountDownloaded: Int,
                 contactDownloaded: Int,
-                opportunityDownloaded: Int
+                opportunityDownloaded: Int,
+                negoAccountUploaded: Int,
+                negoContactUploaded: Int,
+                negoAccountDownloaded: Int,
+                negoContactDownloaded: Int
 )
 
 class LogBuilder {
@@ -30,8 +34,17 @@ class LogBuilder {
     var accountDownloaded: Int = _
     var contactDownloaded: Int = _
     var opportunityDownloaded: Int = _
+    var negoAccountUploaded: Int = _
+    var negoContactUploaded: Int = _
+    var negoAccountDownloaded: Int = _
+    var negoContactDownloaded: Int = _
 
-    def toLog: Log = Log( entireContent, prettyContent, date, duration, retrieve, callback, accountUploaded, contactUploaded, opportunityUploaded, accountDownloaded, contactDownloaded, opportunityDownloaded )
+    def toLog: Log = Log( entireContent, prettyContent,
+                          date, duration, retrieve, callback,
+                          accountUploaded, contactUploaded, opportunityUploaded,
+                          accountDownloaded, contactDownloaded, opportunityDownloaded,
+                          negoAccountUploaded, negoContactUploaded, negoAccountDownloaded, negoContactDownloaded
+    )
     
     def withEntireContent( entireContent: Html ): LogBuilder = {
         this.entireContent = entireContent
@@ -90,6 +103,27 @@ class LogBuilder {
 
     def withOpportunityDownloaded( opportunityDownloaded: Int ): LogBuilder = {
         this.opportunityDownloaded = opportunityDownloaded
+        this
+    }
+
+
+    def withNegoAccountUploaded( accountUploaded: Int ): LogBuilder = {
+        this.negoAccountUploaded = accountUploaded
+        this
+    }
+
+    def withNegoContactUploaded( contactUploaded: Int ): LogBuilder = {
+        this.negoContactUploaded = contactUploaded
+        this
+    }
+
+    def withNegoAccountDownloaded( accountDownloaded: Int ): LogBuilder = {
+        this.negoAccountDownloaded = accountDownloaded
+        this
+    }
+
+    def withNegoContactDownloaded( contactDownloaded: Int ): LogBuilder = {
+        this.negoContactDownloaded = contactDownloaded
         this
     }
 }

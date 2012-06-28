@@ -2,6 +2,7 @@ package services
 
 import play.api.templates.{Html, HtmlFormat}
 import io.{Codec, Source}
+import ParseOption._
 
 
 class LogParser( fileName: String )( implicit basePath: String ) {
@@ -11,8 +12,10 @@ class LogParser( fileName: String )( implicit basePath: String ) {
     
     private val fileContent = Source.fromFile( basePath + "/" + fileName ).mkString
 
-    def retrieveValueFromPattern( pattern: String ): Option[String] = {
-        val startIndex: Int = fileContent.indexOf( pattern )
+    def retrieveValueFromPattern( pattern: String, parseOption: ParseOption = NONE ): Option[String] = {
+
+        val firstIndex: Int = if( parseOption == ADVERTISER ) fileContent.indexOf( pattern ) else 0
+        val startIndex: Int = fileContent.indexOf( pattern, firstIndex + 1 )
 
         if( startIndex >= 0 ) {
             Some( fileContent
@@ -32,11 +35,10 @@ class LogParser( fileName: String )( implicit basePath: String ) {
 
         HtmlFormat.raw( buffer.toString )
     }
-    
+
     def prettyAll: Html = {
         val separator = "=============================="
         val separator2 = "_____________________________"
-
 
         val source = Source.fromFile( basePath + "/" + fileName )( Codec.UTF8 )
 
